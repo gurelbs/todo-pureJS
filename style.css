@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 100vw;
+    background: #333;
+    min-height: 100vh;
+    max-height: auto;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-todo {
+    background-color: transparent;
+    width: max-content;
+    border: 0;
+    outline: 0;
+    margin: 2vw auto;
+    color: white;
+    padding: 1vw 5vw;
+    border-radius: 2vw;
+    font-size: calc(.5rem + 1vw);
+    text-transform: uppercase;
+    box-shadow: 0 0 1vw white;
+    cursor: pointer;
+    background-image: none;
+    transition: .3s ease-in-out;
+}
+
+.add-todo:hover {
+    background-color: skyblue;
+    box-shadow: 0 0 2vw black;
+    color: #333;
+}
+
+.add-todo:active {
+    transform: scale(.98);
+}
+
+.what-to-do {
+    width: max-content;
+    margin: .5vw auto;
+    min-width: 0%;
+    width: 50%;
+    max-width: 50%;
+    outline: 0;
+    padding: 1vw 2vw;
+    display: block;
+    height: auto;
+    font-size: calc(1vw + 1rem);
+    border-radius: .6vw;
+    border: 0;
+}
+
+.unvisible {
+    visibility: hidden;
+}
+
+.to-do-app {
+    display: grid;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: auto;
+    gap: 1rem;
+    position: relative;
+    justify-content: center;
+}
+
+.to-do-item {
+    position: relative;
+    background-color: #eee;
+    text-align: left;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .5vw;
+    box-shadow: 0 0 .8vw black;
+}
+
+.todo-checkbox {
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: .5vw 0 0 0;
+    padding: 1vw;
+}
+
+.to-do-item textarea {
+    overflow-wrap: break-word;
+    font-size: calc(1vw + 1rem);
+    text-transform: capitalize;
+    background-color: transparent;
+    color: black;
+    outline: 0;
+    border: 0;
+    resize: vertical;
+    width: 95%;
+    border-radius: .5vw 0 0 0;
+    padding: 1vw;
+    margin: 0 auto;
+    min-height: 50px;
+}
+
+.to-do-item button {
+    width: 50%;
+    background-color: transparent;
+    outline: 0;
+    padding: .5rem 1rem;
+    border: 0;
+    transition: .3s ease-in-out;
+}
+
+.to-do-item button:hover {
+    cursor: pointer;
+}
+
+.to-do-item button:nth-child(1) {
+    border-left: 1px solid #333;
+    float: right;
+    border-radius: 0 0 .5vw 0;
+}
+
+.to-do-item button:nth-child(2) {
+    border-right: 1px solid #333;
+    border-radius: 0 0 0 .5vw;
+}
+
+.to-do-item button:nth-child(1):hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.to-do-item button:nth-child(2):hover {
+    background-color: rgba(135, 207, 235, 0.5);
+    font-weight: bold;
+}
+
+.mark-as-done {
+    text-decoration: line-through wavy;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 181px) and (max-width: 767px) {
+    .to-do-app {
+        display: grid;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        position: relative;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .to-do-app {
+        display: grid;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        position: relative;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .to-do-app {
+        display: grid;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 1rem;
+        position: relative;
+        justify-content: center;
+    }
+}
