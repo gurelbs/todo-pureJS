@@ -23,11 +23,11 @@
     width: max-content;
     border: 0;
     outline: 0;
-    margin: 2vw auto;
+    margin: calc(2vw + 1rem) auto;
     color: white;
-    padding: 1vw 5vw;
+    padding: calc(1vw + 1rem) calc(5vw + 1rem);
     border-radius: 2vw;
-    font-size: calc(.5rem + 1vw);
+    font-size: calc(2rem + 1vw);
     text-transform: uppercase;
     box-shadow: 0 0 1vw white;
     cursor: pointer;
@@ -166,6 +166,9 @@
         gap: 1rem;
         position: relative;
         justify-content: center;
+    }
+    .add-todo {
+        padding: 1vw 5vw;
     }
 }
 
